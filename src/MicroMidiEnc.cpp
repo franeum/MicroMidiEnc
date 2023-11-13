@@ -47,17 +47,10 @@ void MicroMidiEnc::update()
 
 void MicroMidiEnc::send(byte value)
 {
-    controlChange(_channel, _controller, value);
+    control_change(_channel, _controller, value);
 }
 
 void MicroMidiEnc::set_debug(byte value)
 {
     _debug = value;
 }
-
-/*
-void MicroMidiEnc::set_reverse()
-{
-    _enc->set_reverse();
-}
-*/
