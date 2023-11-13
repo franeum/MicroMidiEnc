@@ -19,7 +19,7 @@ MicroMidiEnc encoder(ENCPIN1, ENCPIN2, MIDI_CHANNEL, N_CONTROLLER, "ENC1");
 void setup()
 {
   // disable serial monitoring if you want
-  // MicroMidiEnc::setDebug(0);
+  // MicroMidiEnc::set_debug(0);
 }
 
 void loop()
