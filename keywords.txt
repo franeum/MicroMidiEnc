@@ -6,7 +6,7 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-MicroMidiEnc    KEYWORD1
+MicroMidiEnc	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -14,4 +14,4 @@ MicroMidiEnc    KEYWORD1
 
 update	KEYWORD2
 begin	KEYWORD2
-set_reverse KEYWWORD2
+set_reverse	KEYWWORD2
