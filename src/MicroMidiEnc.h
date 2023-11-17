@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 #include <BasicEncoder.h>
-#include <MicroMidiUtils.h>
+#include <MicroMidiEncUtils.h>
 
 #define PLUS_ONE_DIRECTION 127
 #define MINUS_ONE_DIRECTION 0
