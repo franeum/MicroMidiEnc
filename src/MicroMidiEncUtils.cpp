@@ -1,11 +1,11 @@
-#include <MicroMidiUtils.h>
+#include <MicroMidiEncUtils.h>
 
-byte check_channel(byte ch)
+byte enc_check_channel(byte ch)
 {
     return ch > 0 && ch < 17 ? ch - 1 : 0;
 }
 
-void control_change(byte channel, byte n_controller, byte value)
+void enc_control_change(byte channel, byte n_controller, byte value)
 {
     midiEventPacket_t event = {0x0B, 0xB0 | channel, n_controller, value};
     MidiUSB.sendMIDI(event);
