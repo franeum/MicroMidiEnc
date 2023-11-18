@@ -14,10 +14,15 @@
       4. midi controller number (0 - 127)
       5. a string representing the encoder (optional, only for debug purpose)
     */
-MicroMidiEnc encoder(ENCPIN1, ENCPIN2, MIDI_CHANNEL, N_CONTROLLER, "ENC1");
+MicroMidiEnc encoder;
 
 void setup()
 {
+  encoder(ENCPIN1, ENCPIN2, MIDI_CHANNEL, N_CONTROLLER, "ENC1");
+
+  // set reverse orientation
+  // encoder.set_reverse();
+
   // disable serial monitoring if you want
   // MicroMidiEnc::set_debug(0);
 }

@@ -4,7 +4,7 @@ byte MicroMidiEnc::_debug = 1;
 
 void MicroMidiEnc::begin(byte pin1, byte pin2, byte channel, byte controller, String identifier)
 {
-    _channel = check_channel(channel);
+    _channel = enc_check_channel(channel);
     _controller = controller;
 
     if (_debug)
@@ -47,7 +47,7 @@ void MicroMidiEnc::update()
 
 void MicroMidiEnc::send(byte value)
 {
-    control_change(_channel, _controller, value);
+    enc_control_change(_channel, _controller, value);
 }
 
 void MicroMidiEnc::set_debug(byte value)
