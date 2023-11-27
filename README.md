@@ -21,6 +21,9 @@ void loop() {
     // Update
     enc.update();
 
-    // ...ll done!
+    // ...all done!
 }
 ```
+
+Credits:
+-   Peter Harrison, [BasicEncoder Library](https://github.com/micromouseonline/BasicEncoder)
