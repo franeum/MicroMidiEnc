@@ -1,7 +1,26 @@
 # MicroMidiEnc
 
-by @franeum
+by [francesco bianchi](https://www.francescobianchi.cloud)
 
-*MIDI over USB rotary encoder controller for ATMega32U4 (Arduino micro, Arduino Leonardo)*
+Arduino Library to use a rotary encoder as MIDI controller (via USB). It currently run only on **ATmega32U4** (Micro and Leonardo).
 
-Arduino (very) Simple Library to manage Rotary Encoders as MIDI messages over USB
+Tha API is based on ICU paradigm: *Instatiate-Configure-Update* and you can use an encoder with only 3 lines of code:
+
+```c++
+#include <MicroMidiEnc.h>
+
+// Instantiate
+MicroMidiEnc enc;
+
+void setup() {
+    // Configure (pin1, pi2, MIDI_CHANNEL (1-16), MIDI_CONTROLLER, LABEL_FOR_DEBUG)
+    enc.begin(D2, D3, 1, 70, "ENC");
+}
+
+void loop() {
+    // Update
+    enc.update();
+
+    // ...ll done!
+}
+```
